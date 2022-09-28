@@ -43,10 +43,10 @@ const agregarAlCarrito = (prodId) => {
     const existe = carrito.some(prod => prod.isbn === prodId)
     if (existe) {
         const prod = carrito.map(prod => {
-            // prod.isbn === prodId && prod.cantidad++
-            if (prod.isbn === prodId) {
-                prod.cantidad++
-            }
+            prod.isbn === prodId && prod.cantidad++
+            // if (prod.isbn === prodId) {
+            //     prod.cantidad++
+            // }
         })
     } else {
         const item = stockLibros.find((prod) => prod.isbn === prodId)
