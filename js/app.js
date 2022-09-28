@@ -38,20 +38,27 @@ botonVaciar.addEventListener("click", () => {
 
 cargarProductos()
 
+// const agregarAlCarrito = (prodId) => {
+
+//     const existe = carrito.some(prod => prod.isbn === prodId)
+//     if (existe) {
+//         const prod = carrito.map(prod => {
+//             prod.isbn === prodId && prod.cantidad++
+//             // if (prod.isbn === prodId) {
+//             //     prod.cantidad++
+//             // }
+//         })
+//     } else {
+//         const item = stockLibros.find((prod) => prod.isbn === prodId)
+//         carrito.push(item)
+//     }
+
+//     actualizarCarrito()
+// }
 const agregarAlCarrito = (prodId) => {
 
     const existe = carrito.some(prod => prod.isbn === prodId)
-    if (existe) {
-        const prod = carrito.map(prod => {
-            prod.isbn === prodId && prod.cantidad++
-            // if (prod.isbn === prodId) {
-            //     prod.cantidad++
-            // }
-        })
-    } else {
-        const item = stockLibros.find((prod) => prod.isbn === prodId)
-        carrito.push(item)
-    }
+    existe ? carrito.map(prod => prod.isbn === prodId && prod.cantidad++) : carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
 
     actualizarCarrito()
 }
