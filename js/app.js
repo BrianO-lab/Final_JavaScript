@@ -57,8 +57,13 @@ cargarProductos()
 // }
 const agregarAlCarrito = (prodId) => {
 
-    const existe = carrito.some(prod => prod.isbn === prodId)
-    existe ? carrito.map(prod => prod.isbn === prodId && prod.cantidad++) : carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
+    // const existe = carrito.some(prod => prod.isbn === prodId)
+    // existe ? carrito.map(prod => prod.isbn === prodId && prod.cantidad++) : carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
+
+
+    carrito.some(prod => prod.isbn === prodId) ?
+        carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
+        carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
 
     actualizarCarrito()
 }
