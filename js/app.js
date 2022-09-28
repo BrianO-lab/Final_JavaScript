@@ -43,6 +43,7 @@ const agregarAlCarrito = (prodId) => {
     const existe = carrito.some(prod => prod.isbn === prodId)
     if (existe) {
         const prod = carrito.map(prod => {
+            // prod.isbn === prodId && prod.cantidad++
             if (prod.isbn === prodId) {
                 prod.cantidad++
             }
@@ -56,6 +57,7 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
+    debugger
     const item = carrito.find((prod) => prod.isbn === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
