@@ -10,7 +10,6 @@ function recuperoCarrito() {
 
 function cargarProductos() {
     stockLibros.forEach((producto) => {
-
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = `
@@ -56,10 +55,6 @@ cargarProductos()
 //     actualizarCarrito()
 // }
 const agregarAlCarrito = (prodId) => {
-
-    // const existe = carrito.some(prod => prod.isbn === prodId)
-    // existe ? carrito.map(prod => prod.isbn === prodId && prod.cantidad++) : carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
-
 
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
