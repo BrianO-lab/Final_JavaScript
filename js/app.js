@@ -13,13 +13,13 @@ function cargarProductos() {
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = `
-    <img src=${producto.img} alt= "">
-    <h3>${producto.titulo}</h3>
-    <p>${producto.desc}</p>
-    <p>Autor: ${producto.autor}</p>
-    <p class="precio-producto">Precio:$ ${producto.precio}</p>
-    <button id="agregar${producto.isbn}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-    `
+        <img src=${producto.img} alt= "">
+        <h3>${producto.titulo}</h3>
+        <p>${producto.desc}</p>
+        <p>Autor: ${producto.autor}</p>
+        <p class="precio-producto">Precio:$ ${producto.precio}</p>
+        <button id="agregar${producto.isbn}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+        `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.isbn}`)
 
@@ -30,36 +30,39 @@ function cargarProductos() {
 }
 
 botonVaciar.addEventListener("click", () => {
-    carrito.length = 0
-    actualizarCarrito()
-    localStorage.removeItem("carrito");
+
+    Swal.fire({
+        template: '#my-template'
+
+
+    })
+
+
+
+
 })
 
 cargarProductos()
 
-// const agregarAlCarrito = (prodId) => {
 
-//     const existe = carrito.some(prod => prod.isbn === prodId)
-//     if (existe) {
-//         const prod = carrito.map(prod => {
-//             prod.isbn === prodId && prod.cantidad++
-//             // if (prod.isbn === prodId) {
-//             //     prod.cantidad++
-//             // }
-//         })
-//     } else {
-//         const item = stockLibros.find((prod) => prod.isbn === prodId)
-//         carrito.push(item)
-//     }
-
-//     actualizarCarrito()
-// }
 const agregarAlCarrito = (prodId) => {
 
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
         carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'bottom-end',
+        showConfirmButton: false,
+        timer: 1000,
+        timerProgressBar: false,
+    })
+
+    Toast.fire({
+        icon: 'success',
+        title: 'Se agrego el producto al carrito'
+    })
     actualizarCarrito()
 }
 

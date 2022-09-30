@@ -8,9 +8,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
-  <script defer src="./js/variables.js"></script>  
+  <script defer src="./js/variables.js"></script>
   <script defer src="./js/modal.js"></script>
   <script defer src="./js/app.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
   <title>Tatake SHOP</title>
@@ -20,22 +21,41 @@
   <header>
     <h1 id="titulo" class="titulo">Tatakae Shop</h1>
     <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
-</header>
+  </header>
 
-<main id="contenedor-productos">
+  <main id="contenedor-productos">
 
-</main>
+  </main>
 
-<div class="modal-contenedor">
+  <div class="modal-contenedor">
     <div class="modal-carrito">
-        <h3>Carrito</h3>
-        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-        <div id="carrito-contenedor">
-        </div>
-        <p class="precio-producto">Precio total: $<span id="precioTotal">0</span></p>
-        <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+      <h3>Carrito</h3>
+      <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+      <div id="carrito-contenedor">
+      </div>
+      <p class="precio-producto">Precio total: $<span id="precioTotal">0</span></p>
+      <button id="vaciar-carrito" class="boton-agregar" data-swal-template="#my-template">Vaciar carrito</button>
     </div>
-</div>
+
+    <template id="my-template">
+      <swal-title>
+        ¿Deseas vaciar el carrito?
+      </swal-title>
+      <swal-icon type="warning" color="red"></swal-icon>
+      <swal-button type="confirm" type="hola">
+        Si
+      </swal-button>
+
+      <swal-button type="deny">
+        No
+      </swal-button>
+      <swal-param name="allowEscapeKey" value="false" />
+      <swal-param name="customClass" value='{ "popup": "my-popup" }' />
+    </template>
+  </div>
+
+
+
 </body>
 
 </html>
