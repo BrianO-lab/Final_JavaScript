@@ -10,16 +10,17 @@ function recuperoCarrito() {
 
 function cargarProductos() {
     stockLibros.forEach((producto) => {
+
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = `
-        <img src=${producto.img} alt= "">
-        <h3>${producto.titulo}</h3>
-        <p>${producto.desc}</p>
-        <p>Autor: ${producto.autor}</p>
-        <p class="precio-producto">Precio:$ ${producto.precio}</p>
-        <button id="agregar${producto.isbn}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-        `
+    <img src=${producto.img} alt= "">
+    <h3>${producto.titulo}</h3>
+    <p>${producto.desc}</p>
+    <p>Autor: ${producto.autor}</p>
+    <p class="precio-producto">Precio:$ ${producto.precio}</p>
+    <button id="agregar${producto.isbn}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+    `
         contenedorProductos.appendChild(div)
         const boton = document.getElementById(`agregar${producto.isbn}`)
 
@@ -29,27 +30,38 @@ function cargarProductos() {
     })
 }
 
+// botonVaciar.addEventListener("click", () => {
+//     carrito.length = 0
+//     actualizarCarrito()
+//     localStorage.removeItem("carrito");
+// })
+
 botonVaciar.addEventListener("click", () => {
-
     Swal.fire({
-        template: '#my-template'
-
-
+        title: '¿Desea vaciar el carrito?',
+        showCancelButton: true,
+        icon: 'warning',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Se vacio el carrito', '', 'success')
+            carrito.length = 0
+            actualizarCarrito()
+            localStorage.removeItem("carrito");
+        }
     })
-
-
-
-
 })
 
 cargarProductos()
-
 
 const agregarAlCarrito = (prodId) => {
 
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
         carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
+
+    actualizarCarrito()
 
     const Toast = Swal.mixin({
         toast: true,
@@ -58,16 +70,14 @@ const agregarAlCarrito = (prodId) => {
         timer: 1000,
         timerProgressBar: false,
     })
-
     Toast.fire({
         icon: 'success',
         title: 'Se agrego el producto al carrito'
     })
-    actualizarCarrito()
+
 }
 
 const eliminarDelCarrito = (prodId) => {
-    debugger
     const item = carrito.find((prod) => prod.isbn === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
@@ -93,6 +103,7 @@ const actualizarCarrito = () => {
     contadorCarrito.innerText = carrito.length
 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
+
 }
 
 recuperoCarrito()

@@ -30,4 +30,13 @@ const stockLibros = [
   { isbn: genIsbn(), titulo: "libro 24", tipo: "libro", cantidad: 1, desc: "Desc", precio: 800, autor: "autor ", img: './img/stock/Hagakure.jpg' },
 ]
 
+const contenedorProductos = document.getElementById('contenedor-productos')
+const contenedorCarrito = document.getElementById('carrito-contenedor')
+const botonVaciar = document.getElementById('vaciar-carrito')
+const contadorCarrito = document.getElementById('contadorCarrito')
+
+const cantidad = document.getElementById('cantidad')
+const precioTotal = document.getElementById('precioTotal')
+const cantidadTotal = document.getElementById('cantidadTotal')
+
 

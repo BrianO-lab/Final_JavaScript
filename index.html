@@ -11,7 +11,7 @@
   <script defer src="./js/variables.js"></script>
   <script defer src="./js/modal.js"></script>
   <script defer src="./js/app.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
   <title>Tatake SHOP</title>
@@ -34,24 +34,8 @@
       <div id="carrito-contenedor">
       </div>
       <p class="precio-producto">Precio total: $<span id="precioTotal">0</span></p>
-      <button id="vaciar-carrito" class="boton-agregar" data-swal-template="#my-template">Vaciar carrito</button>
+      <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
     </div>
-
-    <template id="my-template">
-      <swal-title>
-        ¿Deseas vaciar el carrito?
-      </swal-title>
-      <swal-icon type="warning" color="red"></swal-icon>
-      <swal-button type="confirm" type="hola">
-        Si
-      </swal-button>
-
-      <swal-button type="deny">
-        No
-      </swal-button>
-      <swal-param name="allowEscapeKey" value="false" />
-      <swal-param name="customClass" value='{ "popup": "my-popup" }' />
-    </template>
   </div>
 
 
