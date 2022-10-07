@@ -8,8 +8,10 @@ function recuperoCarrito() {
     }
 }
 
-function cargarProductos() {
-    stockLibros.forEach((producto) => {
+const cargarProductos = async () => {
+    const resp = await fetch("./json/data.json")
+    const data = await resp.json()
+    data.forEach((producto) => {
 
         const div = document.createElement("div")
         div.classList.add("producto")
