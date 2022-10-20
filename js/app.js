@@ -18,7 +18,7 @@ const cargarProductos = async () => {
         div.innerHTML = `
     <img src=${producto.img} alt= "">
     <h3>${producto.titulo}</h3>
-    <p>${producto.desc}</p>
+    <p>${producto.descripcion}</p>
     <p>Autor: ${producto.autor}</p>
     <p class="precio-producto">Precio:$ ${producto.precio}</p>
     <button id="agregar${producto.isbn}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
