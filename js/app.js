@@ -11,7 +11,6 @@ function recuperoCarrito() {
 const cargarProductos = async () => {
     const resp = await fetch("./json/data.json")
     const data = await resp.json()
-    debugger
     data.forEach((producto) => {
         stockLibros.push(producto)
         const div = document.createElement("div")
@@ -81,11 +80,14 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((prod) => prod.isbn === prodId)
+    
+    const item = carrito.find((prod) => Number(prod.isbn) === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
+    console.log(carrito)
     actualizarCarrito()
 }
+
 
 const actualizarCarrito = () => {
     contenedorCarrito.innerHTML = ""
