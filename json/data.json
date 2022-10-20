@@ -4,7 +4,7 @@
     "titulo": "libro 1",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1200,
     "autor": "autor ",
     "img": "./img/stock/Attack_on_Titan_Lost_Girls_(novel).jpg"
@@ -14,7 +14,7 @@
     "titulo": "libro 2",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1100,
     "autor": "autor ",
     "img": "./img/stock/Back_When_You_Called_Us_Devils_Volume_13.jpg"
@@ -24,7 +24,7 @@
     "titulo": "libro 3",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1200,
     "autor": "autor ",
     "img": "./img/stock/Cardcaptor_Sakura_Clear_Card_Volume_11.jpg"
@@ -34,7 +34,7 @@
     "titulo": "libro 4",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1400,
     "autor": "autor ",
     "img": "./img/stock/DAYS_Volume_29.jpg"
@@ -44,7 +44,7 @@
     "titulo": "libro 5",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1200,
     "autor": "autor ",
     "img": "./img/stock/Hagakure.jpg"
@@ -54,7 +54,7 @@
     "titulo": "libro 6",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1500,
     "autor": "autor ",
     "img": "./img/stock/Harem_Marriage_Volume_17.jpg"
@@ -64,7 +64,7 @@
     "titulo": "libro 7",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 500,
     "autor": "autor ",
     "img": "./img/stock/Koigakubo-kun_Stole_My_First_Time_Volume_1.jpg"
@@ -74,7 +74,7 @@
     "titulo": "libro 8",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 500,
     "autor": "autor ",
     "img": "./img/stock/Musashi.jpg"
@@ -84,7 +84,7 @@
     "titulo": "libro 9",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 500,
     "autor": "autor ",
     "img": "./img/stock/Nighttime_for_Just_Us_Two_Volume_2.jpg"
@@ -94,7 +94,7 @@
     "titulo": "libro 10",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 700,
     "autor": "autor ",
     "img": "./img/stock/OTOMO_A_Global_Tribute_to_the_Mind_Behind_Akira.jpg"
@@ -104,7 +104,7 @@
     "titulo": "libro 11",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 700,
     "autor": "autor ",
     "img": "./img/stock/Seraph_of_the_End_Guren_Ichinose_Resurrection_at_Nineteen_Volume_1.jpg"
@@ -114,7 +114,7 @@
     "titulo": "libro 12",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 700,
     "autor": "autor ",
     "img": "./img/stock/Taiko.jpg"
@@ -124,7 +124,7 @@
     "titulo": "libro 13",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 900,
     "autor": "autor ",
     "img": "./img/stock/The_Blade_of_the_Courtesans.jpg"
@@ -134,7 +134,7 @@
     "titulo": "libro 14",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1400,
     "autor": "autor ",
     "img": "./img/stock/The_Seven_Deadly_Sins_Seven-Colored_Recollections.jpg"
@@ -144,7 +144,7 @@
     "titulo": "libro 15",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 7000,
     "autor": "autor ",
     "img": "./img/stock/Your_Lie_in_April_A_Six-Person_Etude.jpg"
@@ -154,7 +154,7 @@
     "titulo": "libro 16",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 777,
     "autor": "autor ",
     "img": "./img/stock/Ring.jpg"
@@ -164,7 +164,7 @@
     "titulo": "libro 17",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 234,
     "autor": "autor ",
     "img": "./img/stock/Shield_of_Straw.jpg"
@@ -174,7 +174,7 @@
     "titulo": "libro 18",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 155600,
     "autor": "autor ",
     "img": "./img/stock/The_Eternal_Zero.jpg"
@@ -184,7 +184,7 @@
     "titulo": "libro 19",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1600,
     "autor": "autor ",
     "img": "./img/stock/Lala_Pipo.jpg"
@@ -194,7 +194,7 @@
     "titulo": "libro 20",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 3200,
     "autor": "autor ",
     "img": "./img/stock/Lala_Pipo.jpg"
@@ -204,7 +204,7 @@
     "titulo": "libro 21",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 2300,
     "autor": "autor ",
     "img": "./img/stock/DAYS_Volume_29.jpg"
@@ -214,7 +214,7 @@
     "titulo": "libro 22",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 5600,
     "autor": "autor ",
     "img": "./img/stock/Cardcaptor_Sakura_Clear_Card_Volume_11.jpg"
@@ -224,7 +224,7 @@
     "titulo": "libro 23",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 1700,
     "autor": "autor ",
     "img": "./img/stock/Back_When_You_Called_Us_Devils_Volume_13.jpg"
@@ -234,7 +234,7 @@
     "titulo": "libro 24",
     "tipo": "libro",
     "cantidad": 1,
-    "desc": "Desc",
+    "descripcion": "Descripcion",
     "precio": 800,
     "autor": "autor ",
     "img": "./img/stock/Hagakure.jpg"

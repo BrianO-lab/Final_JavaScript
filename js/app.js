@@ -80,7 +80,7 @@ const agregarAlCarrito = (prodId) => {
 }
 
 const eliminarDelCarrito = (prodId) => {
-    
+
     const item = carrito.find((prod) => Number(prod.isbn) === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
@@ -105,10 +105,21 @@ const actualizarCarrito = () => {
         localStorage.setItem("carrito", JSON.stringify(carrito))
     })
 
-    contadorCarrito.innerText = carrito.length
+    contadorCarrito.innerText = countCarrito()
+
 
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
 
 }
 
-recuperoCarrito()
+
+function countCarrito() {
+    let totalItem = 0;
+    
+    carrito.forEach((prod)=> {
+        totalItem += prod.cantidad;
+    });
+    return totalItem;
+
+}
+
