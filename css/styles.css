@@ -29,7 +29,7 @@ h1 {
   font-size: 50px;
 }
 
-.nav-header{
+.nav-header {
   display: flex;
   justify-content: space-between;
 }
@@ -186,9 +186,17 @@ p {
   outline: none;
 }
 
+.hideProducto {
+  display: none;
+}
+
+.showProducto {
+  display: block;
+}
+
 /* ---------------------- Nav Filtros ----------------- */
 
-.nav-filtros{
+.nav-filtros {
   list-style: none;
   display: flex;
   justify-content: space-around;

@@ -12,7 +12,7 @@
   {
     "isbn": "2",
     "titulo": "libro 2",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1100,
@@ -22,7 +22,7 @@
   {
     "isbn": "3",
     "titulo": "libro 3",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1200,
@@ -42,7 +42,7 @@
   {
     "isbn": "5",
     "titulo": "libro 5",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1200,
@@ -52,7 +52,7 @@
   {
     "isbn": "6",
     "titulo": "libro 6",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1500,
@@ -72,7 +72,7 @@
   {
     "isbn": "8",
     "titulo": "libro 8",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 500,
@@ -82,7 +82,7 @@
   {
     "isbn": "9",
     "titulo": "libro 9",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 500,
@@ -102,7 +102,7 @@
   {
     "isbn": "11",
     "titulo": "libro 11",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 700,
@@ -112,7 +112,7 @@
   {
     "isbn": "12",
     "titulo": "libro 12",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 700,
@@ -132,7 +132,7 @@
   {
     "isbn": "14",
     "titulo": "libro 14",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1400,
@@ -142,7 +142,7 @@
   {
     "isbn": "15",
     "titulo": "libro 15",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 7000,
@@ -162,7 +162,7 @@
   {
     "isbn": "17",
     "titulo": "libro 17",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 234,
@@ -172,7 +172,7 @@
   {
     "isbn": "18",
     "titulo": "libro 18",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 155600,
@@ -192,7 +192,7 @@
   {
     "isbn": "20",
     "titulo": "libro 20",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 3200,
@@ -202,7 +202,7 @@
   {
     "isbn": "21",
     "titulo": "libro 21",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 2300,
@@ -222,7 +222,7 @@
   {
     "isbn": "23",
     "titulo": "libro 23",
-    "tipo": "libro",
+    "tipo": "manga",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 1700,
@@ -232,7 +232,7 @@
   {
     "isbn": "24",
     "titulo": "libro 24",
-    "tipo": "libro",
+    "tipo": "artbook",
     "cantidad": 1,
     "descripcion": "Descripcion",
     "precio": 800,

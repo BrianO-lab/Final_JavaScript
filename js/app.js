@@ -15,6 +15,7 @@ const cargarProductos = async () => {
         stockLibros.push(producto)
         const div = document.createElement("div")
         div.classList.add("producto")
+        div.classList.add("tipo-"+producto.tipo)
         div.innerHTML = `
     <img src=${producto.img} alt= "">
     <h3>${producto.titulo}</h3>
