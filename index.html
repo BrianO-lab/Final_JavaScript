@@ -11,6 +11,8 @@
   <script defer src="./js/variables.js"></script>
   <script defer src="./js/modal.js"></script>
   <script defer src="./js/app.js"></script>
+  <script defer src="./js/filtro.js"></script>
+
   <script defer src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
@@ -19,11 +21,30 @@
 
 <body>
   <header>
-    <h1 id="titulo" class="titulo">Tatakae Shop</h1>
-    <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    <div class="nav-header">
+      <h1 id="titulo" class="titulo">Tatakae Shop</h1>
+      <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </div>
+    <div class="nav">
+      <ul class="nav-filtros">
+        <li class="nav-filtro--boton">Mangas</li>
+        <li class="nav-filtro--boton">Libros</li>
+        <li class="nav-filtro--boton">Artbook's</li>
+      </ul>
+    </div>
   </header>
 
-  <main id="contenedor-productos">
+  <main >
+    <div>
+      <select name="cars" id="cars">
+        <option value="volvo">Mangas</option>
+        <option value="saab">Libros</option>
+        <option value="opel">Artbook</option>
+      </select>
+      <button onclick="borrarLosItems()" id="borrar-item">borrar</button>
+    </div>
+    <div id="contenedor-productos"></div>
+
 
   </main>
 
