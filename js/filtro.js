@@ -17,6 +17,7 @@ btnMangas.addEventListener('click', mostrarMangas)
 btnLibros.addEventListener('click', mostrarLibros)
 btnArtbooks.addEventListener('click', mostrarArtbooks)
 
+
 function mostrarTodo() {
   for (const prod of productosTodos) {
     prod.classList.remove('showProducto');
