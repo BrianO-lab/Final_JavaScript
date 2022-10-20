@@ -11,8 +11,9 @@ function recuperoCarrito() {
 const cargarProductos = async () => {
     const resp = await fetch("./json/data.json")
     const data = await resp.json()
+    debugger
     data.forEach((producto) => {
-
+        stockLibros.push(producto)
         const div = document.createElement("div")
         div.classList.add("producto")
         div.innerHTML = `

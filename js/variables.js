@@ -8,6 +8,8 @@ const carrito = []
 //   await respuesta.json()
 // ]
 
+const stockLibros = []
+
 const contenedorProductos = document.getElementById('contenedor-productos')
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 const botonVaciar = document.getElementById('vaciar-carrito')
