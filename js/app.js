@@ -63,7 +63,17 @@ const agregarAlCarrito = (prodId) => {
 
 }
 
+const eliminarDelCarrito = (prodId) => {
 
+    const item = carrito.find((prod) => Number(prod.isbn) === prodId)
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1)
+    localStorage.removeItem("carrito");
+    localStorage.setItem("carrito", JSON.stringify(carrito))
+
+    hideShowBtnModal()
+    actualizarCarrito()
+}
 
 
 const actualizarCarrito = () => {
