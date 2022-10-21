@@ -1,9 +1,9 @@
-const recuperoCarrito= () =>{
+const recuperoCarrito = () => {
 
     if (miCarrito = JSON.parse(localStorage.getItem("carrito"))) {
         miCarrito.forEach(prod => {
             carrito.push(prod)
-            
+
         });
         actualizarCarrito()
     }
@@ -40,34 +40,13 @@ const cargarProductos = async () => {
 //     localStorage.removeItem("carrito");
 // })
 
-botonVaciar.addEventListener("click", () => {
-    Swal.fire({
-        title: '¿Desea vaciar el carrito?',
-        showCancelButton: true,
-        icon: 'warning',
-        confirmButtonText: 'Si',
-        cancelButtonText: 'No',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            Swal.fire('Se vacio el carrito', '', 'success')
-            carrito.length = 0
-            actualizarCarrito()
-            localStorage.removeItem("carrito");
 
-            botonVaciar.classList.remove('showProductoFlex')
-            bontonFinalizar.classList.remove('showProductoFlex')
-            botonVaciar.classList.add('hideProducto')
-            bontonFinalizar.classList.add('hideProducto')
-        }
-    })
-})
 
 const agregarAlCarrito = (prodId) => {
 
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
         carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
-
     actualizarCarrito()
 
     const Toast = Swal.mixin({
@@ -112,14 +91,9 @@ const actualizarCarrito = () => {
         contenedorCarrito.appendChild(div)
         localStorage.setItem("carrito", JSON.stringify(carrito))
     })
-
     contadorCarrito.innerText = countCarrito()
-
-
     precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.cantidad * prod.precio, 0)
-
 }
-
 
 function countCarrito() {
     let totalItem = 0;
@@ -128,7 +102,6 @@ function countCarrito() {
         totalItem += prod.cantidad;
     });
     return totalItem;
-
 }
 
 const hideShowBtnModal = () => {
@@ -148,7 +121,47 @@ const hideShowBtnModal = () => {
     }
 }
 
+botonVaciar.addEventListener("click", () => {
+    Swal.fire({
+        title: '¿Desea vaciar el carrito?',
+        showCancelButton: true,
+        icon: 'warning',
+        confirmButtonText: 'Si',
+        cancelButtonText: 'No',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire('Se vacio el carrito', '', 'success')
+            carrito.length = 0
+            actualizarCarrito()
+            localStorage.removeItem("carrito");
 
+            botonVaciar.classList.remove('showProductoFlex')
+            bontonFinalizar.classList.remove('showProductoFlex')
+            botonVaciar.classList.add('hideProducto')
+            bontonFinalizar.classList.add('hideProducto')
+        }
+    })
+})
+
+const finalizarCompra = (()=>{
+    
+})
+
+
+bontonFinalizar.addEventListener('click', () => {
+
+    Swal.fire({
+
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+    }).then(()=>{
+        localStorage.removeItem("carrito");
+    })
+    
+
+})
 
 recuperoCarrito()
 cargarProductos()
