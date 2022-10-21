@@ -5,6 +5,15 @@ const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
 
 
 botonAbrir.addEventListener('click', () => {
+    
+
+    if (carrito.length == 0) {
+        botonVaciar.classList.remove('showProducto')
+        botonVaciar.classList.add('hideProducto')
+    } else {
+        botonVaciar.classList.remove('hideProducto')
+        botonVaciar.classList.add('showProducto')
+    }
     contenedorModal.classList.toggle('modal-active')
 })
 botonCerrar.addEventListener('click', () => {
@@ -13,6 +22,7 @@ botonCerrar.addEventListener('click', () => {
 
 contenedorModal.addEventListener('click', () => {
     contenedorModal.classList.toggle('modal-active')
+
 
 })
 modalCarrito.addEventListener('click', (event) => {

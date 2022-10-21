@@ -15,7 +15,7 @@ const cargarProductos = async () => {
         stockLibros.push(producto)
         const div = document.createElement("div")
         div.classList.add("producto")
-        div.classList.add("tipo-"+producto.tipo)
+        div.classList.add("tipo-" + producto.tipo)
         div.innerHTML = `
     <img src=${producto.img} alt= "">
     <h3>${producto.titulo}</h3>
@@ -52,9 +52,14 @@ botonVaciar.addEventListener("click", () => {
             carrito.length = 0
             actualizarCarrito()
             localStorage.removeItem("carrito");
+
+            botonVaciar.classList.remove('showProducto');
+            botonVaciar.classList.add('hideProducto');
         }
     })
 })
+
+botonVaciar
 
 cargarProductos()
 
@@ -85,7 +90,8 @@ const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => Number(prod.isbn) === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
-    console.log(carrito)
+    botonVaciar.classList.remove('showProducto')
+    botonVaciar.classList.add('hideProducto')
     actualizarCarrito()
 }
 
@@ -116,11 +122,13 @@ const actualizarCarrito = () => {
 
 function countCarrito() {
     let totalItem = 0;
-    
-    carrito.forEach((prod)=> {
+
+    carrito.forEach((prod) => {
         totalItem += prod.cantidad;
     });
     return totalItem;
 
 }
+
+
 
