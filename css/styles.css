@@ -102,6 +102,13 @@ p {
 .boton-agregar:focus {
   outline: none;
 }
+.boton-finalizar:hover {
+  cursor: pointer;
+}
+
+.boton-finalizar:focus {
+  outline: none;
+}
 
 .modal-contenedor {
   position: fixed;
