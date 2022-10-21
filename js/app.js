@@ -1,10 +1,11 @@
-function recuperoCarrito() {
+const recuperoCarrito= () =>{
 
     if (miCarrito = JSON.parse(localStorage.getItem("carrito"))) {
         miCarrito.forEach(prod => {
             carrito.push(prod)
-            actualizarCarrito()
+            
         });
+        actualizarCarrito()
     }
 }
 
@@ -61,9 +62,9 @@ botonVaciar.addEventListener("click", () => {
     })
 })
 
-botonVaciar
 
-cargarProductos()
+
+
 
 const agregarAlCarrito = (prodId) => {
 
@@ -149,3 +150,6 @@ const hideShowBtnModal = () => {
 }
 
 
+
+recuperoCarrito()
+cargarProductos()
