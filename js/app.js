@@ -53,8 +53,10 @@ botonVaciar.addEventListener("click", () => {
             actualizarCarrito()
             localStorage.removeItem("carrito");
 
-            botonVaciar.classList.remove('showProducto');
-            botonVaciar.classList.add('hideProducto');
+            botonVaciar.classList.remove('showProductoFlex')
+            bontonFinalizar.classList.remove('showProductoFlex')
+            botonVaciar.classList.add('hideProducto')
+            bontonFinalizar.classList.add('hideProducto')
         }
     })
 })
@@ -90,8 +92,7 @@ const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => Number(prod.isbn) === prodId)
     const indice = carrito.indexOf(item)
     carrito.splice(indice, 1)
-    botonVaciar.classList.remove('showProducto')
-    botonVaciar.classList.add('hideProducto')
+    hideShowBtnModal()
     actualizarCarrito()
 }
 
@@ -130,5 +131,21 @@ function countCarrito() {
 
 }
 
+const hideShowBtnModal = () => {
+    if (carrito.length == 0) {
+
+        botonVaciar.classList.remove('showProductoFlex')
+        bontonFinalizar.classList.remove('showProductoFlex')
+        botonVaciar.classList.add('hideProducto')
+        bontonFinalizar.classList.add('hideProducto')
+        // bontonFinalizar.classList.remove('showProductoFlex')
+        // bontonFinalizar.classList.add('hideProducto')
+    } else {
+        botonVaciar.classList.remove('hideProducto')
+        bontonFinalizar.classList.remove('hideProducto')
+        botonVaciar.classList.add('showProductoFlex')
+        bontonFinalizar.classList.add('showProductoFlex')
+    }
+}
 
 

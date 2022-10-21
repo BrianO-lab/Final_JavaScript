@@ -13,6 +13,7 @@ const stockLibros = []
 const contenedorProductos = document.getElementById('contenedor-productos')
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 const botonVaciar = document.getElementById('vaciar-carrito')
+const bontonFinalizar = document.getElementById('finalizar-compra')
 const contadorCarrito = document.getElementById('contadorCarrito')
 
 const cantidad = document.getElementById('cantidad')

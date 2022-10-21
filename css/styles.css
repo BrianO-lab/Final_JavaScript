@@ -78,7 +78,15 @@ p {
   font-weight: 700;
 }
 
-.boton-agregar {
+.boton-agregar  {
+  background-color: royalblue;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px;
+  border: none;
+}
+.boton-finalizar{
   background-color: royalblue;
   color: white;
   font-size: 18px;
@@ -194,6 +202,14 @@ p {
   display: block;
 }
 
+.showProductoFlex {
+  display: flex;
+}
+
+.carrito-botones{
+  display: flex;
+  justify-content: space-between;
+}
 /* ---------------------- Nav Filtros ----------------- */
 
 .nav-filtros {
