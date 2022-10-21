@@ -143,23 +143,30 @@ botonVaciar.addEventListener("click", () => {
     })
 })
 
-const finalizarCompra = (()=>{
-    
+const finalizarCompra = (() => {
+
 })
 
 
 bontonFinalizar.addEventListener('click', () => {
 
     Swal.fire({
-
+        title: 'Tu compra ha sido realizada.',
+        text: 'Gracias por confiar en nosotros.',
         icon: 'success',
-        title: 'Your work has been saved',
-        showConfirmButton: false,
-        timer: 1500
-    }).then(()=>{
-        localStorage.removeItem("carrito");
+        confirmButtonText: 'OK',
+    }).then((result) => {
+
+        if (result.isConfirmed) {
+            
+            carrito.length = 0
+            actualizarCarrito()
+            localStorage.removeItem("carrito");
+            contenedorModal.classList.toggle('modal-active')
+        }
+
     })
-    
+
 
 })
 
