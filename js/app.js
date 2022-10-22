@@ -9,11 +9,35 @@ const recuperoCarrito = () => {
     }
 
 }
+function resetStock() {
+
+    stockLibros.length = 0
+}
+
+function cargarStock() {
+    
+    resetStock()
+    fetch("./json/data.json")
+        .then((response) => response.json())
+        .then((result) => {
+            result.forEach((prod) => {
+                stockLibros.push(prod)
+            })
+        })
+   
+
+
+}
 
 const cargarProductos = async () => {
+
     const resp = await fetch("./json/data.json")
     const data = await resp.json()
+
+    
     data.forEach((producto) => {
+
+        
         stockLibros.push(producto)
         const div = document.createElement("div")
         div.classList.add("producto")
@@ -44,12 +68,11 @@ const cargarProductos = async () => {
 
 
 const agregarAlCarrito = (prodId) => {
-
+    
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
         carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
     actualizarCarrito()
-
     const Toast = Swal.mixin({
         toast: true,
         position: 'bottom-end',
@@ -72,6 +95,7 @@ const eliminarDelCarrito = (prodId) => {
     carrito.splice(indice, 1)
     localStorage.removeItem("carrito")
     actualizarCarrito()
+    cargarStock()
     hideShowBtnModal()
 
 
@@ -131,12 +155,13 @@ botonVaciar.addEventListener("click", () => {
         confirmButtonText: 'Si',
         cancelButtonText: 'No',
     }).then((result) => {
+        
         if (result.isConfirmed) {
             Swal.fire('Se vacio el carrito', '', 'success')
             carrito.length = 0
             actualizarCarrito()
             localStorage.removeItem("carrito");
-
+            cargarStock()
             botonVaciar.classList.remove('showProductoFlex')
             bontonFinalizar.classList.remove('showProductoFlex')
             botonVaciar.classList.add('hideProducto')
@@ -167,5 +192,5 @@ bontonFinalizar.addEventListener('click', () => {
 
 })
 
-recuperoCarrito()
+// recuperoCarrito()
 cargarProductos()
