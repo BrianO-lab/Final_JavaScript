@@ -183,6 +183,7 @@ bontonFinalizar.addEventListener('click', () => {
 
             carrito.length = 0
             actualizarCarrito()
+            cargarStock()
             localStorage.removeItem("carrito");
             contenedorModal.classList.toggle('modal-active')
         }
