@@ -15,7 +15,7 @@ function resetStock() {
 }
 
 function cargarStock() {
-    
+
     resetStock()
     fetch("./json/data.json")
         .then((response) => response.json())
@@ -24,7 +24,7 @@ function cargarStock() {
                 stockLibros.push(prod)
             })
         })
-   
+
 
 
 }
@@ -34,10 +34,10 @@ const cargarProductos = async () => {
     const resp = await fetch("./json/data.json")
     const data = await resp.json()
 
-    
+
     data.forEach((producto) => {
 
-        
+
         stockLibros.push(producto)
         const div = document.createElement("div")
         div.classList.add("producto")
@@ -68,7 +68,7 @@ const cargarProductos = async () => {
 
 
 const agregarAlCarrito = (prodId) => {
-    
+
     carrito.some(prod => prod.isbn === prodId) ?
         carrito.map(prod => prod.isbn === prodId && prod.cantidad++) :
         carrito.push(stockLibros.find((prod) => prod.isbn === prodId))
@@ -155,7 +155,7 @@ botonVaciar.addEventListener("click", () => {
         confirmButtonText: 'Si',
         cancelButtonText: 'No',
     }).then((result) => {
-        
+
         if (result.isConfirmed) {
             Swal.fire('Se vacio el carrito', '', 'success')
             carrito.length = 0
@@ -192,6 +192,9 @@ bontonFinalizar.addEventListener('click', () => {
 
 
 })
+
+
+
 
 // recuperoCarrito()
 cargarProductos()
